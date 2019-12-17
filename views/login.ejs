@@ -1,0 +1,27 @@
+<%- include('./partials/header') %>
+
+<div class="wrapper fadeInDown">
+    <!-- <div id="formContent"></div>
+  
+     
+      <form action="/login" method="POST">
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="login">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+    </div>
+  </div> -->
+
+
+<form action="/login" method="POST">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Sign in</button>
+  </form>
+
+<%- include('./partials/footer') %>
+
+

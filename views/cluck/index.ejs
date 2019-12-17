@@ -1,0 +1,36 @@
+
+<%- include("../partials/header") %>
+
+
+<% 
+if (clucks.length > 0) { 
+    for (let cluck of clucks) { 
+%>
+        <div class="card mb-4" >
+            <div class="card-body">
+                <div class="d-flex " style="width: 100%">
+                    <h3 class="card-title"><img src="https://images.unsplash.com/photo-1518492104633-130d0cc84637?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80" alt="<%= cluck.username %>" class="img-circle team-logo rounded-circle mr-3 small" height="72px" width="72px"></h3>
+                    <p class="card-text" style="width: calc(100% - 72px)"><%= cluck.content %></p>
+                </div>
+                
+              ​<picture>
+                <source srcset="<%= cluck.imageUrl %>" type="image/svg+xml">
+                <img src="<%= cluck.imageUrl %>" class="img-fluid" alt="Responsive image">
+              </picture>
+            </div>
+          </div>
+
+        <% } } else { %>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title my-4">There are no clucks.</h5>
+              <a href="/cluck/new" class="btn btn-primary mt-3">New Clucks</a>
+            </div>
+          </div>
+          <% } %>
+        
+
+
+<%- include("../partials/footer") %>
+
+
