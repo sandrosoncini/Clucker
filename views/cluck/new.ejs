@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+
+<!-- <form action="/clucks" method="POST">
+    <div>
+        <textarea name="content" cols="60" rows="8"></textarea>
+      </div>
+  
+    <div>
+    <input type="text" name="imageUrl" placeholder="imageUrl" />
+  </div>
+
+  <input type="submit" value="Submit">
+</form> -->
+<form action="/clucks" method="POST">
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea class="form-control" id="content" name="content"  cols="60" rows="8" placeholder="What are you thinking?"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image Url</label>
+    <input type="text" class="form-control" id="imageUrl"  name="imageUrl" placeholder="https://images.app.goo.gl/8r9kQmawXYtsaVSL8">
+  </div>
+  <button type="submit"  class="btn btn-secondary">Cluck</button>
+</form>
+<%- include("../partials/footer") %>
+
+
+
